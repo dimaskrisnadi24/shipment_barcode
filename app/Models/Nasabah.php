@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Nasabah extends Model
+{
+    protected $table = "users";
+    protected $primarykey = "id";
+    protected $fillable = ['id','roles','name','email','password','alamat','notelp'];
+
+    public function addData($data)
+    {
+        DB::table('users')-> insert ($data);
+    }
+}
