@@ -55,7 +55,10 @@ class NasabahController extends Controller
         $nasabah_new = new \App\Models\nasabah;
         $nasabah_new->name = $name;
         $nasabah_new->roles = $roles;
-        $nasabah_new->harga = $harga;
+        $nasabah_new->email = $email;
+        $nasabah_new->password = $password;
+        $nasabah_new->alamat = $alamat;
+        $nasabah_new->notelp = $notelp;
         $nasabah_new->save();
 
         return redirect()->route('nasabah.index');

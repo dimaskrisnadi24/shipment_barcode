@@ -44,6 +44,7 @@
             <tr>
                 <th> Username</th>
                 <th> Email</th>
+                <th> Roles </th>
                 <th> Password</th>
                 <th> Alamat</th>
                 <th> No Telepon</th>
@@ -57,6 +58,7 @@
                     <tr>
                     <td>{{ $data->name}}</td>
                     <td>{{ $data->email}}</td>
+                    <td>{{ $data->roles}}</td>
                     <td>{{ $data->password}}</td>
                     <td>{{ $data->alamat}}</td>
                     <td>+62{{ $data->notelp}}</td>
