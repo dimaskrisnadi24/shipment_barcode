@@ -34,7 +34,7 @@ Route::get('/tambahsampah', [SampahController::class, 'tambahsampah'])->name('ta
 Route::post('/insertdata', [SampahController::class, 'insertdata'])->name('insertdata');
 
 //nasabah
-//Route::get('/nasabah', [NasabahController::class, 'index'])->middleware(['auth']);
+Route::get('/nasabah', [NasabahController::class, 'index'])->middleware(['auth']);
 //Route::get('/tambahnasabah', [NasabahController::class, 'tambahnasabah'])->name(['tambahnasabah']);
 //Route::post('/insertnasabah',[NasabahController::class, 'insertnasabah'])->name(['insertnasabah']);
 
