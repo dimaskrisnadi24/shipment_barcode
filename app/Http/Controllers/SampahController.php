@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\sampah;
+use DataTables;
 
 class SampahController extends Controller
 {
@@ -19,6 +20,16 @@ class SampahController extends Controller
     {
         $data = Sampah::all();
         return view('sampah.index', ['sampah' => $data]);
+    }
+
+    public function sampah()
+    {
+        $data = Sampah::select('*')
+                ->join('datasampah', 'datasampah.id', '=', 'datasampah.nama','datasampah.jenis','datasampah.harga')
+                ->where('datasampah.id', 2)
+                ->limit(100)
+                ->get();
+        return DataTables::of($data)->make(true);
     }
 
     public function tambahsampah()

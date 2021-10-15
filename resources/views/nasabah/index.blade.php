@@ -34,47 +34,45 @@
        <div class="card card-info card-outline">
        <div class="card-header">
        <div class="card-tools">
-            <a href="{{url('tambahnasabah')}}" class="btn btn-success"> Tambah Nasabah <i class="fas fa-plus-square"></i></a>
+            <a href="{{route('nasabah.create')}}" class="btn btn-success"> Tambah Nasabah <i class="fas fa-plus-square"></i></a>
         </div>
         </div>
 
-        <div class= "card-body">
-            <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th> Username</th>
-                <th> Email</th>
-                <th> Roles </th>
-                <th> Password</th>
-                <th> Alamat</th>
-                <th> No Telepon</th>
-                <th> Total Tabung Sampah</th>
-                <th> Total Saldo</th>
-                <th> Action </th>
-            </tr>
-            </thead>
-            <tbody>
+        <div class="card">
+           
+            <!-- /.card-header -->
+            <div class="card-body p-0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Username</th>
+                    <th>Roles</th>
+                    <th>Email</th>
+                    <th>Alamat</th>
+                    <th>No Telepon</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
                     @foreach ($nasabah as $data)
                     <tr>
                     <td>{{ $data->name}}</td>
-                    <td>{{ $data->email}}</td>
                     <td>{{ $data->roles}}</td>
-                    <td>{{ $data->password}}</td>
+                    <td>{{ $data->email}}</td>
                     <td>{{ $data->alamat}}</td>
                     <td>+62{{ $data->notelp}}</td>
-                    <td>{{ $data->totalsampah}} Kg</td>
-                    <td>Rp. {{ $data->totalsaldo}}</td>
                     <td>
-                        <button type="submit" class="btn btn-warning">Edit</button>
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                        </td>
+                        <a href="" class="btn btn-sm btn-warning"> Update</a>
+                        <a href="" class="btn btn-sm btn-danger"> Delete</a> 
+                    </td>
                     </tr>
                     @endforeach
-            </tbody>
-            </table>
-        </div>
-        </div>
-
+                </tbody>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+       
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
