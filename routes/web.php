@@ -32,7 +32,9 @@ Route::get('/home', [HomeController::class, 'index'])->middleware(['auth']);
 Route::get('/sampah', [SampahController::class, 'index'])->middleware(['auth']);
 Route::get('/tambahsampah', [SampahController::class, 'tambahsampah'])->name('tambahsampah');
 Route::post('/insertdata', [SampahController::class, 'insertdata'])->name('insertdata');
-
+Route::get('/edit/{id}', [SampahController::class, 'edit'])->name('edit');
+Route::get('/delete', [SampahController::class, 'delete'])->name('delete');
+Route::post('/update/{id}', [SampahController::class, 'update'])->name('update');
 
 Route::resource('nasabah', NasabahController::class);
 Route::resource('sampah', SampahController::class);

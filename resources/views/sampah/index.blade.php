@@ -57,8 +57,9 @@
                     <td>{{ $data->harga}}</td>
                     <td>{{ $data->jenis}}</td>
                     <td>
-                        <a href="" class="btn btn-sm btn-warning"> Update</a>
-                        <a href="" class="btn btn-sm btn-danger"> Delete</a>
+                        <a href="{{url('edit',$data->id)}}" class="far fa-edit"></a>
+                    
+                        <a href="{{route('delete')}}" class="far fa-trash-alt " style="color:red"></a>
                         </td>
                     </tr>
                     @endforeach

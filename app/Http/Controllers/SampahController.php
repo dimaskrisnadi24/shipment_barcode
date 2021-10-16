@@ -74,7 +74,7 @@ class SampahController extends Controller
         $sampah_new->harga = $harga;
         $sampah_new->save();
 
-        return redirect()->route('sampah.index');
+        return redirect()->route('sampah.index')->with('toast_success','Data Berhasil Tersimpan');
     }
 
     /**
@@ -96,7 +96,15 @@ class SampahController extends Controller
      */
     public function edit($id)
     {
-        //
+        $sampah = Sampah::findorfail($id);
+        return view('sampah.editsampah',compact('sampah'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $sampah = Sampah::findorfail($id);
+        $sampah->update($request->all());
+        return redirect()->route('sampah.index')->with('toast_success','Data Berhasil Di Update ');
     }
 
     /**

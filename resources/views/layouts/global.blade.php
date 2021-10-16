@@ -74,11 +74,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
                         @endif
 
-                        @if(\Auth::user()->roles == 1)
+                        @if(\Auth::user()->roles == 1 )
                         <li class="nav-item dropdown">
-                        <a id="dropdownSubMenu1" href="{{ url('') }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Data Nasabah</a>
+                        <a id="dropdownSubMenu1" href="{{ url('nasabah') }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Data Nasabah</a>
                         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
-                        <li><a href="{{url('tambah data')}}" class="dropdown-item">Tambah Data Nasabah </a></li>
+                        <li><a href="{{route('nasabah.create')}}" class="dropdown-item">Tambah Data Nasabah </a></li>
                         <li><a href="{{url('nasabah')}}" class="dropdown-item">Lihat Data Nasabah</a></li>
                         </ul>
                         </li>
