@@ -18,7 +18,7 @@ class SampahController extends Controller
     
     public function index()
     {
-        $data = Sampah::all();
+        $data = Sampah::paginate(5);
         return view('sampah.index', ['sampah' => $data]);
     }
 
@@ -64,7 +64,7 @@ class SampahController extends Controller
         $sampah_new->harga = $harga;
         $sampah_new->save();
 
-        return redirect()->route('sampah.index');
+        return redirect()->route('sampah.index')->with('success','Data Berhasil Di Update');
     }
 
     /**
@@ -113,7 +113,8 @@ class SampahController extends Controller
      */
     public function destroy($id)
     {
+        $sampah = Sampah::findorfail($id);
         $sampah->delete();
-        return redirect('sampah')->with('success', 'Data berhasil Dihapus');
+        return back();
     }
 }

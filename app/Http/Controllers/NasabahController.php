@@ -71,9 +71,10 @@ class NasabahController extends Controller
         $nasabah->update($request->all());
         return redirect()->route('nasabah.index');
     }
-    public function destroy($id)
+    public function nasabahdelete($id)
     {
+        $nasabah = nasabah::findorfail($id);
         $nasabah->delete();
-        return redirect('nasabah')->with('success', 'Data berhasil Dihapus');
+        return back();
     }
 }

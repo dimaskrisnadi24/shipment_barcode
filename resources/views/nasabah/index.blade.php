@@ -61,7 +61,7 @@
                     <td>+62{{ $data->notelp}}</td>
                     <td>
                         <a href="{{route('edit_nasabah',$data->id)}}" class="far fa-edit"></a>
-                        <a href="{{url('delete')}}" class="far fa-trash-alt " style="color:red"></a> 
+                        <a href="{{url('nasabahdelete',$data->id)}}" class="far fa-trash-alt " style="color:red"></a> 
                     </td>
                     </tr>
                     @endforeach

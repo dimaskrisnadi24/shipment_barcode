@@ -59,13 +59,17 @@
                     <td>
                         <a href="{{url('edit',$data->id)}}" class="far fa-edit"></a>
                     
-                        <a href="{{route('delete')}}" class="far fa-trash-alt " style="color:red"></a>
+                        <a href="{{url('delete',$data->id)}}" class="far fa-trash-alt " style="color:red"></a>
                         </td>
                     </tr>
                     @endforeach
             </tbody>
             </table>
         </div>
+            <div class="card-footer">
+                {{ $sampah->links()}}
+
+            </div>
         </div>
 
         <!-- /.content -->

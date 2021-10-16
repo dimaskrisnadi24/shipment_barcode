@@ -33,11 +33,11 @@ Route::get('/sampah', [SampahController::class, 'index'])->middleware(['auth']);
 Route::get('/tambahsampah', [SampahController::class, 'tambahsampah'])->name('tambahsampah');
 Route::post('/insertdata', [SampahController::class, 'insertdata'])->name('insertdata');
 Route::get('/edit/{id}', [SampahController::class, 'edit'])->name('edit');
-Route::get('/delete', [SampahController::class, 'delete'])->name('delete');
+Route::get('/delete/{id}', [SampahController::class, 'destroy'])->name('delete');
 Route::post('/update/{id}', [SampahController::class, 'update'])->name('update');
 
 Route::get('/edit_nasabah/{id}', [NasabahController::class, 'edit_nasabah'])->name('edit_nasabah');
-Route::get('/delete_nasabah', [NasabahController::class, 'delete_nasabah'])->name('delete_nasabah');
+Route::get('/nasabahdelete/{id}', [NasabahController::class, 'nasabahdelete'])->name('nasabahdelete');
 Route::post('/nasabahupdate/{id}', [NasabahController::class, 'nasabahupdate'])->name('nasabahupdate');
 
 Route::resource('nasabah', NasabahController::class);

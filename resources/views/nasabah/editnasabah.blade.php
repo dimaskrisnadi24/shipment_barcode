@@ -65,6 +65,11 @@
                     <label for="notelp">Nomor Telpon</label>
                     <input type="number" name="notelp" class="form-control " id="notelp" value="{{$nasabah->notelp}}">
                 </div>
+
+                <div class="col-12 col-sm-12">
+                    <label for="password">Password</label>
+                    <input type="varchar" name="password" class="form-control " id="password" value="{{$nasabah->password}}">
+                </div>
             
                     
                 <th></th>

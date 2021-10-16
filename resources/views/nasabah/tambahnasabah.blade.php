@@ -68,7 +68,7 @@
             
                     
                 <th></th>
-                    <button type="submit" class="btn btn-success col-5"> Simpan Data </button>
+                    <button type="submit" class="btn btn-success col-5 row-5 center"> Simpan Data </button>
                 </div>
                 
               </div>
