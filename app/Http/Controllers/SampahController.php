@@ -22,6 +22,12 @@ class SampahController extends Controller
         return view('sampah.index', ['sampah' => $data]);
     }
 
+    public function cetaklaporansampah()
+    {
+        $sampah = Sampah::get();
+        return view('sampah.laporansampah', ['sampah' => $sampah]);
+    }
+
     public function tambahsampah()
     {
     
