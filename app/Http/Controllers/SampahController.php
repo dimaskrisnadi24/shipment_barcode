@@ -22,16 +22,6 @@ class SampahController extends Controller
         return view('sampah.index', ['sampah' => $data]);
     }
 
-    public function sampah()
-    {
-        $data = Sampah::select('*')
-                ->join('datasampah', 'datasampah.id', '=', 'datasampah.nama','datasampah.jenis','datasampah.harga')
-                ->where('datasampah.id', 2)
-                ->limit(100)
-                ->get();
-        return DataTables::of($data)->make(true);
-    }
-
     public function tambahsampah()
     {
     
@@ -74,7 +64,7 @@ class SampahController extends Controller
         $sampah_new->harga = $harga;
         $sampah_new->save();
 
-        return redirect()->route('sampah.index')->with('toast_success','Data Berhasil Tersimpan');
+        return redirect()->route('sampah.index');
     }
 
     /**

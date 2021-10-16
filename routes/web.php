@@ -36,5 +36,9 @@ Route::get('/edit/{id}', [SampahController::class, 'edit'])->name('edit');
 Route::get('/delete', [SampahController::class, 'delete'])->name('delete');
 Route::post('/update/{id}', [SampahController::class, 'update'])->name('update');
 
+Route::get('/edit_nasabah/{id}', [NasabahController::class, 'edit_nasabah'])->name('edit_nasabah');
+Route::get('/delete_nasabah', [NasabahController::class, 'delete_nasabah'])->name('delete_nasabah');
+Route::post('/nasabahupdate/{id}', [NasabahController::class, 'nasabahupdate'])->name('nasabahupdate');
+
 Route::resource('nasabah', NasabahController::class);
 Route::resource('sampah', SampahController::class);

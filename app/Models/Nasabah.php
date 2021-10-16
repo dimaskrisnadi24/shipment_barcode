@@ -10,7 +10,7 @@ class Nasabah extends Model
 {
     protected $table = "users";
     protected $primarykey = "id";
-    protected $fillable = ['id','roles','name','email','alamat','notelp'];
+    protected $fillable = ['id','roles','name','email','password','alamat','notelp'];
 
     public function addData($data)
     {

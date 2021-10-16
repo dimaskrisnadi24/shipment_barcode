@@ -27,24 +27,26 @@ class NasabahController extends Controller
 
     public function create(Request $request)
     {
-       //nasabah::create($request->all());
+     
        return view('nasabah.tambahnasabah');
-       //return redirect()-> route('nasabah.index');
+    
     }
 
 
     public function store(Request $request)
     {
-        $name = $request->get('name');
         $roles = $request->get('roles');
+        $name = $request->get('name');
         $email = $request->get('email');
+        $password = $request->get('password');
         $alamat = $request->get('alamat');
         $notelp = $request->get('notelp');
 
         $nasabah_new = new \App\Models\Nasabah;
-        $nasabah_new->name = $name;
         $nasabah_new->roles = $roles;
+        $nasabah_new->name = $name;
         $nasabah_new->email = $email;
+        $nasabah_new->password = $password;
         $nasabah_new->alamat = $alamat;
         $nasabah_new->notelp = $notelp;
         $nasabah_new->save();
@@ -57,11 +59,18 @@ class NasabahController extends Controller
         //
     }
 
-    public function edit($id)
+    public function edit_nasabah($id)
     {
-        //
+        $nasabah = nasabah::findorfail($id);
+        return view('nasabah.editnasabah',compact('nasabah'));
     }
 
+    public function nasabahupdate(Request $request, $id)
+    {
+        $nasabah = nasabah::findorfail($id);
+        $nasabah->update($request->all());
+        return redirect()->route('nasabah.index');
+    }
     public function destroy($id)
     {
         $nasabah->delete();

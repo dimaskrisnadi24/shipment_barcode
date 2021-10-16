@@ -46,7 +46,6 @@
                 <thead>
                   <tr>
                     <th>Username</th>
-                    <th>Roles</th>
                     <th>Email</th>
                     <th>Alamat</th>
                     <th>No Telepon</th>
@@ -57,13 +56,12 @@
                     @foreach ($nasabah as $data)
                     <tr>
                     <td>{{ $data->name}}</td>
-                    <td>{{ $data->roles}}</td>
                     <td>{{ $data->email}}</td>
                     <td>{{ $data->alamat}}</td>
                     <td>+62{{ $data->notelp}}</td>
                     <td>
-                        <a href="" class="btn btn-sm btn-warning"> Update</a>
-                        <a href="" class="btn btn-sm btn-danger"> Delete</a> 
+                        <a href="{{route('edit_nasabah',$data->id)}}" class="far fa-edit"></a>
+                        <a href="{{url('delete')}}" class="far fa-trash-alt " style="color:red"></a> 
                     </td>
                     </tr>
                     @endforeach
