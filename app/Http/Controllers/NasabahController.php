@@ -14,6 +14,12 @@ class NasabahController extends Controller
         return view('nasabah.index', ['nasabah' => $data]);
     }
 
+    public function cetaklaporannasabah()
+    {
+        $nasabah = nasabah::get();
+        return view('nasabah.laporannasabah', ['nasabah' => $nasabah]);
+    }
+
     public function tambahnasabah()
     {
     

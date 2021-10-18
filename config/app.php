@@ -236,6 +236,7 @@ return [
         'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
         'DataTables' => Yajra\DataTables\Facades\DataTables::class,
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+        
     ],
 
 ];

@@ -54,7 +54,7 @@
                     <tr>
                     <td>{{ $data->id}}</td>
                     <td>{{ $data->nama}}</td>
-                    <td>{{ $data->harga}}</td>
+                    <td>Rp. {{ $data->harga}}</td>
                     <td>{{ $data->jenis}}</td>
                     <td>
                         <a href="{{url('edit',$data->id)}}" class="far fa-edit"></a>

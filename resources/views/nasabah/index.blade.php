@@ -41,8 +41,8 @@
         <div class="card">
            
             <!-- /.card-header -->
-            <div class="card-body p-0">
-              <table class="table">
+            <div class="card-body ">
+              <table class="table table-bordered">
                 <thead>
                   <tr>
                     <th>Username</th>

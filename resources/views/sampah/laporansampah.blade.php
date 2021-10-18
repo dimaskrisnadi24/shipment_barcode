@@ -23,12 +23,18 @@
         </div>
         <!-- /.content-header -->
         <div class="container">
-            <div class="justify-content-center">
-                <div class="card-header jsutify-content-center">
-                    <h3 aling="center" class="card-title">Laporan Data Sampah</h3>
-                  </div>
-                <div class= "card-body">
-                    <table class="table table-bordered">
+            <div class="content">
+            <div style="background;font-size: 30px; color: Black"> Laporan Data Sampah Bank Samita
+             </div>
+            <div class="card card-info card-outline">
+            <div class="card-header">
+             </div>
+     
+            
+                
+                 <!-- /.card-header -->
+                 <div class="card-body">
+                   <table class="table table-bordered">
                     <tr>
                         <th> ID Sampah </th>
                         <th> Nama Sampah</th>
@@ -43,10 +49,10 @@
                         <td>Rp.{{ $data->harga}}</td>
                     </tr>    
                     @endforeach
-                    
-                    </table>
-                </div>
-            </div>
+                     </tbody>
+                   </table>
+                 </div>
+           
             </div>
         </div>
         <script type="text/javascript">
