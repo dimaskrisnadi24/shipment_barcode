@@ -46,7 +46,7 @@
                               <p>Jumlah Transaksi</p>
                             </div>
                             <div class="icon">
-                              <i class="ion ion-bag"></i>
+                              <i class="far fa-chart-bar"></i>
                             </div>
                             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                           </div>
@@ -61,9 +61,9 @@
                               <p>Jumlah User</p>
                             </div>
                             <div class="icon">
-                              <i class="ion ion-stats-bars"></i>
+                              <i class="fas fa-users"></i>
                             </div>
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="{{url('nasabah')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                           </div>
                         </div>
                         <!-- ./col -->
@@ -71,12 +71,12 @@
                           <!-- small box -->
                           <div class="small-box bg-warning">
                             <div class="inner">
-                              <h3>44</h3>
+                              <h3>150</h3>
               
                               <p>Transaksi Baru</p>
                             </div>
                             <div class="icon">
-                              <i class="ion add-circle"></i>
+                              <i class="fas fa-exchange-alt"></i>
                             </div>
                             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                           </div>
@@ -86,43 +86,24 @@
                           <!-- small box -->
                           <div class="small-box bg-danger">
                             <div class="inner">
-                              <h3>65</h3>
-              
-                              <p>Buat Akun</p>
+                             <h4>Buat Akun</h4>
+                              <p></p>
+                              <br>
+                              <br>
                             </div>
                             <div class="icon">
-                              <i class="ion ion-person-add"></i>
+                              <i class="fas fa-user-plus"></i>
                             </div>
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="{{route('nasabah.create')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                           </div>
                         </div>
                         <!-- ./col -->
                       </div>
-                    <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="C:\xampp\htdocs\shipment_barcode\public\pictures\pic1.jpg" class="d-block w-100" alt="gambar">
-                </div>
-                <div class="carousel-item">
-                  <img src="dk3.png" class="d-block w-100" alt="gambar">
-                </div>
-                <div class="carousel-item">
-                  <img src="dk4.png" class="d-block w-100" alt="gambar">
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-            </div><!-- /.container-fluid -->
+                
+        <!-- /.container-fluid -->
+                      <div>
+                        <iframe src="https://calendar.google.com/calendar/embed?src=id.indonesian%23holiday%40group.v.calendar.google.com&ctz=Asia%2FJakarta" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                      </div>
         </div>
         <!-- /.content -->
     </div>
