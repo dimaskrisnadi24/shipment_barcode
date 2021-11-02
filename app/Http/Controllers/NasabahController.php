@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\nasabah;
+use Illuminate\Support\Facades\Hash;
 use DataTables;
 
 class NasabahController extends Controller
@@ -44,7 +45,7 @@ class NasabahController extends Controller
         $roles = $request->get('roles');
         $name = $request->get('name');
         $email = $request->get('email');
-        $password = $request->get('password');
+        $password = Hash::make('samita123');
         $alamat = $request->get('alamat');
         $notelp = $request->get('notelp');
 
