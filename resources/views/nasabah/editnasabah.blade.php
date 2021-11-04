@@ -64,14 +64,7 @@
                 <div class="col-12 col-sm-8">
                     <label for="notelp">Nomor Telpon</label>
                     <input type="number" name="notelp" class="form-control " id="notelp" value="{{$nasabah->notelp}}">
-                </div>
-
-                <div class="col-12 col-sm-12">
-                    <label for="password">Password</label>
-                    <input type="varchar" name="password" class="form-control " id="password" value="{{$nasabah->password}}">
-                </div>
-            
-                    
+                </div>         
                 <th></th>
                     <button type="submit" class="btn btn-success col-5"> Update Data </button>
                 </div>

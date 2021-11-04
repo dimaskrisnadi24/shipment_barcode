@@ -130,9 +130,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
                         @endif
 
-                        <!-- <li class="nav-item">
-                            <a href="{{ url('scanner_collect') }}" class="nav-link">Scanner Collect</a>
-                        </li> -->
                         <li class="nav-item">
                             <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
