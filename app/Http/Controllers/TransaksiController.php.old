@@ -1,0 +1,56 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\transaksi;
+use DataTables;
+
+class TransaksiController extends Controller
+{
+    
+    public function index()
+    {
+        $data = Transaksi::paginate(10);
+        return view('transaksi.index', ['transaksi' => $data]);
+    }
+
+    public function cetaklaporantransaksi()
+    {
+        $transaksi = Transaksi::get();
+        return view('transaksi.laporantransaksi', ['transaski' => $transaksi]);
+    }
+
+    public function transaksibaru()
+    {
+    
+        return view('transaksi.transaksibaru');
+    }
+
+    public function insertdata(Request $request)
+    {
+       transaksi::create($request->all());
+       return redirect()-> route('transaksi.index');
+    }
+
+    public function store(Request $request)
+    {
+        $id_transaksi = $request->get('id_transaksi');
+        $jenis_transaksi = $request->get('jenis_transaksi');
+        $jumlah = $request->get('jumlah');
+        $saldo_m = $request->get('saldo_m');
+        $saldo_k = $request->get('saldo_k');
+
+        $transaksi_new = new \App\Models\Transaksi;
+        $transaksi_new->id_transaksi = $id_transaksi;
+        $transaksi_new->jenis_transaksi = $jenis_transaksi;
+        $transaksi_new->jumlah = $jumlah;
+        $transaksi_new->saldo_m = $saldo_m;
+        $transaksi_new->saldo_k = $saldo_k;
+        $transaksi_new->save();
+
+        return redirect()->route('transaksi.index')->with('success','Data Berhasil Di Update');
+    }
+
+    
+}

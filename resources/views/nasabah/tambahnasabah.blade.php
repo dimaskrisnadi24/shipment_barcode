@@ -65,7 +65,17 @@
                     <label for="notelp">Nomor Telpon</label>
                     <input type="number" name="notelp" class="form-control " id="notelp" placeholder="Masukan Nomor Telpon ...">
                 </div>
-            
+                
+                <div class="col-12 col-sm-8">
+                    <p class="text-danger">
+                        ** Tingkatan Roles **
+                    <br>1 = Admin
+                    <br>2 = Nasabah
+                    <br>3 = Supervisor
+                    <br>4 = Dewan Gereja
+                    <br>5 = Staff Bank Sampah Induk
+                    </p>
+                </div>
                     
                 <th></th>
                     <button type="submit" class="btn btn-success col-5 row-5 center"> Simpan Data </button>

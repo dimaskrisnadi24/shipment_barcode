@@ -91,8 +91,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <li class="nav-item dropdown">
                         <a id="dropdownSubMenu1" href="{{ url('') }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Transaksi</a>
                         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
-                        <li><a href="#" class="dropdown-item">Input Transaksi Baru </a></li>
-                        <li><a href="#" class="dropdown-item">Lihat Data Transaksi</a></li>
+                        <li><a href="{{url('transaksibaru')}}" class="dropdown-item">Input Transaksi Baru </a></li>
+                        <li><a href="{{url('transaksi')}}" class="dropdown-item">Lihat Data Transaksi</a></li>
                         </ul>
                         </li>
                         </li>
@@ -140,6 +140,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
                 @endif
 
+                    <!-- Role Dewan Gereja -->
+
                 <!-- Right navbar links -->
                 <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
                     
@@ -178,6 +180,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!--sweet alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+    <script>
+        var SITE_URL = "{{ url('/') }}";
+    </script>
     <!-- load script -->
     {{ $script }}
 </body>

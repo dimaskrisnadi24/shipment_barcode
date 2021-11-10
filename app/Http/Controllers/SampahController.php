@@ -18,7 +18,7 @@ class SampahController extends Controller
     
     public function index()
     {
-        $data = Sampah::paginate(5);
+        $data = Sampah::paginate(10);
         return view('sampah.index', ['sampah' => $data]);
     }
 
