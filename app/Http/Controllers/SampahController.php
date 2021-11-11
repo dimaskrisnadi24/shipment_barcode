@@ -28,6 +28,12 @@ class SampahController extends Controller
         return view('sampah.laporansampah', ['sampah' => $sampah]);
     }
 
+    public function hargasampah()
+    {
+        $sampah = Sampah::get();
+        return view('sampah.hargasampah', ['sampah' => $sampah]);
+    }
+
     public function tambahsampah()
     {
     

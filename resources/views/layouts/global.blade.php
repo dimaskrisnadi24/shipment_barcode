@@ -115,19 +115,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         @if(\Auth::user()->roles == 2)
                         <li class="nav-item dropdown">
-                        <a id="dropdownSubMenu1" href="{{ url('#') }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">TabunganKu</a>
-                        <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
-                        <li><a href="{{url('#')}}" class="dropdown-item">Jumlah Tabungan Sampah </a></li>
-                        </ul>
-                        </li>
-                        </li>
-                        @endif
-
-                        @if(\Auth::user()->roles == 2)
-                        <li class="nav-item dropdown">
-                        <a id="dropdownSubMenu1" href="{{ url('sampah') }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Saldo Tabungan</a>
-                        </li>
-                        </li>
+                       <a href="#"  aria-haspopup="true" aria-expanded="false" class="nav-link">Settings</a>
                         @endif
 
                         <li class="nav-item">

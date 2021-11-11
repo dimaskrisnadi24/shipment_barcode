@@ -72,6 +72,8 @@ class NasabahController extends Controller
         return view('nasabah.editnasabah',compact('nasabah'));
     }
 
+    
+
     public function nasabahupdate(Request $request, $id)
     {
         $nasabah = nasabah::findorfail($id);

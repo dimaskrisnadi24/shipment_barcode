@@ -28,7 +28,7 @@
           <!-- Admin -->
               @if (\Auth::user()->roles == 1)
               <div class="container">
-                <h4>Anda telah login menggunakan akun <b>{{Auth::user()->email}}</b>, Selamat Bekerja !!!</h4>
+                <h4>Anda telah login menggunakan akun <b>{{Auth::user()->email}}</b>, Selamat Melayani!!!</h4>
          </div>
                 <div class="col-lg-15">
                     <div class="card card-primary  center">
@@ -106,7 +106,61 @@
         <div class="container">
                <h4>Hai Hai  <b>{{Auth::user()->name}}</b>, Selamat datang di Bank Sampah Samita</h4>
         </div>
-        @endif
+
+         <div class="col-lg-12">
+                    <div class="card card-primary-center">
+                      <div class="row">
+                        <div class="col-lg-4 col-6">
+                          <!-- small box -->
+                          <div class="small-box bg-info">
+                            <div class="inner">
+                              <h4>Harga Sampah</h4>
+                              <br>
+                              <br>
+                              <p>
+                            </div>
+                            <div class="icon">
+                              <i class="far fa-chart-bar"></i>
+                            </div>
+                            <a href="{{route('hargasampah')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-4 col-6">
+                          <!-- small box -->
+                          <div class="small-box bg-success">
+                            <div class="inner">
+                              <H4>Jumlah Tabungan</h4>
+                                <br>
+                                <br>
+                                <p>
+                            </div>
+                            <div class="icon">
+                              <i class="fas fa-university"></i>
+                            </div>
+                            <a href="{{url('nasabah')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                      
+                        <!-- ./col -->
+                        <div class="col-lg-4 col-6">
+                          <!-- small box -->
+                          <div class="small-box bg-danger">
+                            <div class="inner"> 
+                             <h4>Setting Account</h4>
+                             <br>
+                             <br>
+                             <p>
+                            </div>
+                            <div class="icon">
+                              <i class="fas fa-cogs" a href="{{route('cetaklaporannasabah')}}"></i>
+                            </div>
+                            <a href="{{route('cetaklaporannasabah')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                          </div>
+                        </div>
+
+                       @endif
         
         <!-- Supervisor -->
         @if (\Auth::user()->roles == 3)

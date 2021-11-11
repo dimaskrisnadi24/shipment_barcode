@@ -14,7 +14,7 @@ class TransaksiController extends Controller
             ->addIndexColumn()
             ->addColumn('action', function ($row) {
                 $btn = "<div class='btn btn-group'><a href='".url("transaksi/edit/$row->id")."'class='btn btn-warning'>Edit</a>
-                <a href='".url("transaksi/delete/$row->id")."'class='btn btn-danger'>Delete</a></div>";
+                <a href='".url("transaksi/destroy/$row->id")."'class='btn btn-danger'>Delete</a></div>";
                 return $btn;
             })
             ->rawColumns(['action'])->toJson();
@@ -94,6 +94,8 @@ class TransaksiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $transaksi = Sampah::findorfail($id);
+        $transaksi->delete();
+        return back();
     }
 }
