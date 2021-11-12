@@ -56,9 +56,7 @@
            
             </div>
         </div>
-        <script type="text/javascript">
-        window.print();
-        </script>
+       
     <!-- /.content-wrapper -->
 
     <!-- Control Sidebar -->

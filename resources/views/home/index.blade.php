@@ -37,8 +37,10 @@
                           <!-- small box -->
                           <div class="small-box bg-info">
                             <div class="inner">
-                              <h3>150</h3>
-                              <p>Jumlah Transaksi</p>
+                              <h4>Data Transaksi</h4>
+                              <p></p>
+                              <br>
+                              <br>
                             </div>
                             <div class="icon">
                               <i class="far fa-chart-bar"></i>
@@ -51,9 +53,10 @@
                           <!-- small box -->
                           <div class="small-box bg-success">
                             <div class="inner">
-                              <h3>53<sup style="font-size: 20px">%</sup></h3>
-              
-                              <p>Jumlah User</p>
+                              <h4>Jumlah User</h4>
+                              <p></p>
+                              <br>
+                              <br>
                             </div>
                             <div class="icon">
                               <i class="fas fa-users"></i>
@@ -65,10 +68,11 @@
                         <div class="col-lg-3 col-6">
                           <!-- small box -->
                           <div class="small-box bg-warning">
-                            <div class="inner">
-                              <h3>150</h3>
-              
-                              <p>Transaksi Baru</p>
+                            <div class="inner">              
+                              <h4>Transaksi Baru</h4>
+                              <p></p>
+                              <br>
+                              <br>
                             </div>
                             <div class="icon">
                               <i class="fas fa-exchange-alt"></i>
@@ -94,7 +98,7 @@
                         </div>
                         <!-- ./col -->
                       </div>
-                
+         
         <!-- /.container-fluid -->
                       <div>
                         <iframe src="https://calendar.google.com/calendar/embed?src=id.indonesian%23holiday%40group.v.calendar.google.com&ctz=Asia%2FJakarta" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
@@ -148,25 +152,60 @@
                           <!-- small box -->
                           <div class="small-box bg-danger">
                             <div class="inner"> 
-                             <h4>Setting Account</h4>
+                             <h4>Transaksi</h4>
                              <br>
                              <br>
                              <p>
                             </div>
                             <div class="icon">
-                              <i class="fas fa-cogs" a href="{{route('cetaklaporannasabah')}}"></i>
+                              <i class="fa fa-spinner"></i>
                             </div>
                             <a href="{{route('cetaklaporannasabah')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                           </div>
                         </div>
 
-                       @endif
+                @endif
         
         <!-- Supervisor -->
         @if (\Auth::user()->roles == 3)
         <div class="container">
-               <h4>Anda telah login menggunakan akun <b>{{Auth::user()->email}}</b>, Selamat Bekerja !!!</h4>
+               <h4>Anda telah login menggunakan akun <b>{{Auth::user()->email}}</b>, Selamat Melayani !!!</h4>
         </div>
+
+        <div class="col-lg-12">
+                    <div class="card card-primary">
+                      <div class="row">
+                        <div class="col-lg-4 col-6">
+                          <!-- small box -->
+                          <div class="small-box bg-info">
+                            <div class="inner">
+                              <h4>Update Data Sampah</h4>
+                              <br>
+                              <br>
+                              <p>
+                            </div>
+                            <div class="icon">
+                              <i class="far fa-chart-bar"></i>
+                            </div>
+                            <a href="{{route('sampah.index')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                          </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-4 col-6">
+                          <!-- small box -->
+                          <div class="small-box bg-success">
+                            <div class="inner">
+                              <H4>Jumlah Tabungan</h4>
+                                <br>
+                                <br>
+                                <p>
+                            </div>
+                            <div class="icon">
+                              <i class="fas fa-university"></i>
+                            </div>
+                            <a href="{{url('nasabah')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                          </div>
+                        </div>
         @endif
 
         <!-- Dewan Gereja -->
@@ -202,6 +241,12 @@
         </div>
         @endif
 
+         <!-- Staff Bank Sampah Induk -->
+         @if (\Auth::user()->roles == 5)
+         <div class="container">
+                <h4>Anda telah login menggunakan akun <b>{{Auth::user()->email}}</b>, Selamat Melayani !!!</h4>
+         </div>
+         @endif
 
         <!-- /.content -->
     </div>

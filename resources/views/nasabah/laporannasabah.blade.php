@@ -29,8 +29,10 @@
         <!-- /.content-header -->
         <div class="container">
        <div class="content">
-       <div style="background;font-size: 30px; color: Black"> Laporan Data Nasabah Bank Samita
-        </div>
+        <div class="content">
+            <img src="{{asset('adminlte/dist/img/samita.png')}}" alt="Samita" style="opacity: 1.0"></div>
+        <div class="text-center" style="background;font-size: 40px; color: Black" img src="{{asset('adminlte/dist/img/samita.png')}}" alt="Samita" style="opacity: 1.0"> Laporan Data Nasabah Bank Samita
+         </div>
        <div class="card card-info card-outline">
        <div class="card-header">
         </div>           

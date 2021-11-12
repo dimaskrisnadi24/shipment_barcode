@@ -27,6 +27,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet"
         href="{{ asset('adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
 
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
     <!-- load stylesheet -->
     {{ $stylesheet }}
 </head>
@@ -167,7 +169,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!--sweet alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+    <script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>	
     <script>
         var SITE_URL = "{{ url('/') }}";
     </script>

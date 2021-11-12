@@ -38,8 +38,8 @@
               <form action="{{url('update',$sampah->id) }}" method="post" enctype="multipart/form-data">
                @csrf
                 <div class="mb-3">
-                    <label for="tambahsampah">Nama Sampah</label>
-                    <input type="text" name="nama" class="form-control " id="tambahsampah" placeholder="Masukan nama sampah ..." value="{{$sampah->nama}}">
+                    <label for="namasampah">Nama Sampah</label>
+                    <input type="text" name="nama" class="form-control " id="tambahsampah" value="{{$sampah->nama}}">
                 </div>
 
                 <div class="row">
@@ -55,7 +55,7 @@
               </div>
                 <!-- /.form-group -->
             </div>
-            <div class="col-12 col-sm-8">
+            <div class="col-lg-12 col-sm-8">
                     <button type="submit" class="btn btn-success"> Update Data </button>
                 </div>
             </div>
