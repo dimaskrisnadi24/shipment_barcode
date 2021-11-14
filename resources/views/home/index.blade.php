@@ -195,7 +195,7 @@
                           <!-- small box -->
                           <div class="small-box bg-success">
                             <div class="inner">
-                              <H4>Jumlah Tabungan</h4>
+                              <H4>Laporan</h4>
                                 <br>
                                 <br>
                                 <p>
@@ -206,38 +206,76 @@
                             <a href="{{url('nasabah')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                           </div>
                         </div>
+
+                        <div class="col-lg-4 col-6">
+                          <!-- small box -->
+                          <div class="small-box bg-danger">
+                            <div class="inner">
+                              <H4>Setting Account</h4>
+                                <br>
+                                <br>
+                                <p>
+                            </div>
+                            <div class="icon">
+                              <i class="fas fa fa-cog"></i>
+                            </div>
+                            <a href="{{url('nasabah')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                          </div>
+                        </div>
         @endif
 
         <!-- Dewan Gereja -->
         @if (\Auth::user()->roles == 4)
         <div class="container">
-          <div class="col-lg-3 col-6">
-          <div class="small-box bg-info">
-            <div class="inner">
-              <h3>150</h3>
-              <p>Jumlah Transaksi</p>
-            </div>
-            <div class="icon">
-              <i class="far fa-chart-bar"></i>
-            </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-6">
-          <!-- small box -->
-          <div class="small-box bg-success">
-            <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
+          <div class="col-lg-12">
+            <div class="card card-primary">
+              <div class="row">
+                <div class="col-lg-4 col-6">
+                  <!-- small box -->
+                  <div class="small-box bg-info">
+                    <div class="inner">
+                      <h4>Update Data Sampah</h4>
+                      <br>
+                      <br>
+                      <p>
+                    </div>
+                    <div class="icon">
+                      <i class="far fa-chart-bar"></i>
+                    </div>
+                    <a href="{{route('sampah.index')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-4 col-6">
+                  <!-- small box -->
+                  <div class="small-box bg-success">
+                    <div class="inner">
+                      <H4>Laporan</h4>
+                        <br>
+                        <br>
+                        <p>
+                    </div>
+                    <div class="icon">
+                      <i class="fas fa-university"></i>
+                    </div>
+                    <a href="{{url('nasabah')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
 
-              <p>Jumlah User</p>
-            </div>
-            <div class="icon">
-              <i class="fas fa-users"></i>
-            </div>
-            <a href="{{url('nasabah')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-          </div>
-        </div> 
+                <div class="col-lg-4 col-6">
+                  <!-- small box -->
+                  <div class="small-box bg-danger">
+                    <div class="inner">
+                      <H4>Setting Account</h4>
+                        <br>
+                        <br>
+                        <p>
+                    </div>
+                    <div class="icon">
+                      <i class="fas fa fa-cog"></i>
+                    </div>
+                    <a href="{{url('nasabah')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                  </div> 
         </div>
         @endif
 

@@ -3,11 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\sampah;
-use DataTables;
+use App\Models\Sampah;
 
 class SampahController extends Controller
 {
+    public function sampah_json()
+    {
+        $data = sampah::orderBy('datasampah.id','DESC');
+        return datatables()->of($data)
+            ->addIndexColumn()
+            ->addColumn('action', function ($row) {
+                $btn = "<div class='btn btn-group'><a href='".url("transaksi/edit/$row->id")."'class='btn btn-warning'>Edit</a>
+                <a href='".url("transaksi/destroy/$row->id")."'class='btn btn-danger'>Delete</a></div>";
+                return $btn;
+            })
+            ->rawColumns(['action'])->toJson();
+    }
     /**
      * Display a listing of the resource.
      *
@@ -101,6 +112,7 @@ class SampahController extends Controller
         $sampah = Sampah::findorfail($id);
         return view('sampah.editsampah',compact('sampah'));
     }
+    
 
     public function update(Request $request, $id)
     {

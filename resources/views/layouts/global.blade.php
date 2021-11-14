@@ -117,7 +117,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         @if(\Auth::user()->roles == 2)
                         <li class="nav-item dropdown">
-                       <a href="#"  aria-haspopup="true" aria-expanded="false" class="nav-link">Settings</a>
+                       <a href="{{url('nasabah.editnasabah')}}"  aria-haspopup="true" aria-expanded="false" class="nav-link">Settings</a>
                         @endif
 
                         <li class="nav-item">

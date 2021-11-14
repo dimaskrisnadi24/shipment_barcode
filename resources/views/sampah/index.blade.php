@@ -2,7 +2,18 @@
 
     <!-- stylesheet -->
     <x-slot name="stylesheet">
-
+        <script src="{{ asset('swal2/dist/sweetalert2.min.js') }}"></script>
+        <link rel="stylesheet" href="{{ asset('swal2/dist/sweetalert2.min.css') }}">
+        <!-- daterange picker -->
+        <link rel="stylesheet" href="{{ asset('adminlte/plugins/daterangepicker/daterangepicker.css') }}">
+        <!-- Tempusdominus Bootstrap 4 -->
+        <link rel="stylesheet"
+            href="{{ asset('adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('adminlte/custom/bootstrap-select/bootstrap-select.min.css') }}">
+        <!-- DataTables -->
+        <link rel="stylesheet"
+            href="{{ asset('adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
+   
     </x-slot>
 
     <!-- title -->
@@ -17,11 +28,8 @@
             <div class="container">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        {{-- <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Data Sampah</a></li>
-                            <li class="breadcrumb-item"><a href="#">Layout</a></li>
-                            <li class="breadcrumb-item active">Top Navigation</li>
-                        </ol> --}}
+                       
+                        <div class="col-sm-6">
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->

@@ -94,7 +94,7 @@ class TransaksiController extends Controller
      */
     public function destroy($id)
     {
-        $transaksi = Sampah::findorfail($id);
+        $transaksi = Transaksi::findorfail($id);
         $transaksi->delete();
         return back();
     }
