@@ -4,6 +4,7 @@ use App\Http\Controllers\SampahController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NasabahController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\DewanController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -56,3 +57,5 @@ Route::resource('sampah', SampahController::class);
 Route::get('/transaksi_json', [TransaksiController::class, 'transaksi_json'])->middleware(['auth']);
 Route::get('/transaksi', [TransaksiController::class, 'index'])->middleware(['auth']);
 Route::resource('transaksi', TransaksiController::class);
+
+//dewan
