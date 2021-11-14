@@ -183,7 +183,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             </div>
             <!-- Default to the left -->
+            <div class="noprint">
             <strong>Copyright &copy; 2021 <a href="#">Bank Samita</a>.</strong> All rights reserved.
+            </div>
         </footer>
     </div>
     <!-- ./wrapper -->
