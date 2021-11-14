@@ -36,6 +36,13 @@ class TransaksiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function cetaklaporantransaksi()
+    {
+        $transaksi = transaksi_json::get();
+        return view('transaksi.laporantransaksi', ['transaksi' => $transaksi]);
+    }
+
     public function create()
     {
         //

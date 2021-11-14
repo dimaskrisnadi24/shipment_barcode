@@ -57,5 +57,6 @@ Route::resource('sampah', SampahController::class);
 Route::get('/transaksi_json', [TransaksiController::class, 'transaksi_json'])->middleware(['auth']);
 Route::get('/transaksi', [TransaksiController::class, 'index'])->middleware(['auth']);
 Route::resource('transaksi', TransaksiController::class);
+Route::get('/cetaklaporantransaksi', [Nasabahcontroller::class, 'cetaklaporantransaksi'])->name('cetaklaporantransaksi');
 
 //dewan

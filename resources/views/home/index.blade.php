@@ -228,6 +228,7 @@
         @if (\Auth::user()->roles == 4)
         <div class="container">
           <div class="col-lg-12">
+            <h4>Anda telah login menggunakan akun <b>{{Auth::user()->email}}</b>, Selamat Melayani !!!</h4>
             <div class="card card-primary">
               <div class="row">
                 <div class="col-lg-4 col-6">
@@ -277,12 +278,14 @@
                     <a href="{{url('nasabah')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                   </div> 
         </div>
+
+        
         @endif
 
          <!-- Staff Bank Sampah Induk -->
          @if (\Auth::user()->roles == 5)
          <div class="container">
-                <h4>Anda telah login menggunakan akun <b>{{Auth::user()->email}}</b>, Selamat Melayani !!!</h4>
+                <h4>Selamat Datang <b>{{Auth::user()->email}}</b></h4>
          </div>
          @endif
 

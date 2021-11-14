@@ -120,6 +120,38 @@ scratch. This page gets rid of all links and provides the needed markup only.
                        <a href="{{url('nasabah.editnasabah')}}"  aria-haspopup="true" aria-expanded="false" class="nav-link">Settings</a>
                         @endif
 
+                        <!-- Role Supervisor -->
+                        
+                        @if(\Auth::user()->roles == 3)
+                        <li class="nav-item dropdown">
+                       <a href="{{url('nasabah.editnasabah')}}"  aria-haspopup="true" aria-expanded="false" class="nav-link">Settings</a>
+                        @endif
+
+                        <!-- Role Dewan Gereja -->
+                        
+                        @if(\Auth::user()->roles == 4)
+                        <li class="nav-item dropdown">
+                        <a id="dropdownSubMenu1" href="{{ url('') }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Laporan</a>
+                        <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
+                        <li><a href="{{url('#')}}" class="dropdown-item">Laporan Transaksi </a></li>
+                        </ul>
+                        </li>
+                        </li>
+                        @endif
+
+                        <!-- Role Staff Bank Sampah Induk -->
+
+                        @if(\Auth::user()->roles == 5)
+                        <li class="nav-item dropdown">
+                        <a id="dropdownSubMenu1" href="{{ url('') }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Laporan </a>
+                        <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
+                        <li><a href="{{url('#')}}" class="dropdown-item">Laporan Transaksi </a></li>
+                        <li><a href="{{url('cetaklaporansampah')}}" class="dropdown-item">Laporan Data Sampah</a></li>
+                        </ul>
+                        </li>
+                        </li>
+                        @endif
+
                         <li class="nav-item">
                             <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -130,8 +162,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
                 @endif
 
-                    <!-- Role Dewan Gereja -->
+                        
 
+
+                   
                 <!-- Right navbar links -->
                 <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
                     

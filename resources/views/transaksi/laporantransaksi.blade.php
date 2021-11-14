@@ -7,7 +7,7 @@
 
     <!-- title -->
     <x-slot name="title">
-        Cetak Laporan Data Sampah
+        Cetak Laporan Data Transaksi
     </x-slot>
 
     <!-- Content Wrapper. Contains page content -->
@@ -44,17 +44,19 @@
                  <div class="card-body">
                    <table class="table table-bordered">
                     <tr>
-                        <th> ID Sampah </th>
-                        <th> Nama Sampah</th>
-                        <th> Jenis Sampah</th>
-                        <th> Harga Sampah</th>
+                        <th> Id Transaksi</th>
+                        <th> Id Nasabah</th>
+                        <th> Jenis Transaksi</th>
+                        <th> Jumlah Timbangan</th>
+                        <th> Total Transaksi</th>
                     </tr>
-                    @foreach ($sampah as $data)
+                    @foreach ($transaksi as $data)
                     <tr>
                         <td>{{ $data->id}}</td>
                         <td>{{ $data->nama}}</td>
-                        <td>{{ $data->jenis}}</td>
-                        <td>Rp.{{ $data->harga}}</td>
+                        <td>{{ $data->jenis_transaksi}}</td>
+                        <td>{{ $data->jumlah}} Kg</td>
+                        <td>Rp.{{ $data->total_transaksi}}</td>
                     </tr>    
                     @endforeach
                      </tbody>

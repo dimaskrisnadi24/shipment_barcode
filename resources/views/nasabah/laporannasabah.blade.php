@@ -28,11 +28,15 @@
         </div>
         <!-- /.content-header -->
         <div class="container">
-       <div class="content">
-        <div class="content">
-            <img src="{{asset('adminlte/dist/img/samita.png')}}" alt="Samita" style="opacity: 1.0"></div>
-        <div class="text-center" style="background;font-size: 40px; color: Black" img src="{{asset('adminlte/dist/img/samita.png')}}" alt="Samita" style="opacity: 1.0"> Laporan Data Nasabah Bank Samita
-         </div>
+             <div class="card-header">
+            <div class="card-tools ">
+                <div class="noprint">
+                 <a class="btn btn-danger" onclick="window.print();"> Cetak Disini <i class="fas fa-print"></i></a>
+             </div>
+            </div>
+            <div class="content">
+                <img src="{{asset('adminlte/dist/img/samita.png')}}" alt="Samita" style="opacity: 1.0">
+            <div class="text-center" style="background;font-size: 50px; color: Black"> Laporan Data Nasabah Bank Samita</div>
        <div class="card card-info card-outline">
        <div class="card-header">
         </div>           
@@ -63,15 +67,17 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-    <script type="text/javascript">
-        window.print();
-    </script>
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
         <!-- Control sidebar content goes here -->
     </aside>
     <!-- /.control-sidebar -->
-
+    <style>   
+        @media print
+        {
+        .noprint {display:none;}
+        }
+    </style>
     <!-- script -->
     <x-slot name="script">
 
