@@ -82,7 +82,7 @@
                     <span id="total">
             
                     </span>
-                    <button id="add" class="btn btn-">Tambah</button>
+                    <button id="add" class="btn btn-secondary">Tambah</button>
         <!-- /.content-->
          </div>
                         </div>
