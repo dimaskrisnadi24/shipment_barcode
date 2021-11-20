@@ -31,6 +31,11 @@ class TransaksiController extends Controller
         return view('transaksi.index');
     }
 
+    public function tambahtransaksi()
+    {
+    
+        return view('transaksi.tambahtransaksi');
+    }
     /**
      * Show the form for creating a new resource.
      *

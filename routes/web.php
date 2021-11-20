@@ -58,5 +58,5 @@ Route::get('/transaksi_json', [TransaksiController::class, 'transaksi_json'])->m
 Route::get('/transaksi', [TransaksiController::class, 'index'])->middleware(['auth']);
 Route::resource('transaksi', TransaksiController::class);
 Route::get('/cetaklaporantransaksi', [Nasabahcontroller::class, 'cetaklaporantransaksi'])->name('cetaklaporantransaksi');
-
+Route::get('/tambahtransaksi', [TransaksiController::class, 'tambahtransaksi'])->name('tambahtransaksi');
 //dewan
