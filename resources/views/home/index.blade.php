@@ -31,18 +31,6 @@
                 <h4>Anda telah login menggunakan akun <b>{{Auth::user()->email}}</b>, Selamat Melayani!!!</h4>
          </div>
                 <div class="col-lg-15">
-                  <div class="col-md-3 col-sm-6 col-12">
-                    <div class="info-box">
-                      <span class="info-box-icon bg-info"><i class="far fa-chart-bar"></i></span>
-        
-                      <div class="info-box-content">
-                        <span class="info-box-text">Data Transaksi</span>
-                        <span class="info-box-number">1,410</span>
-                      </div>
-                      <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                  </div>
                     <div class="card card-primary  center">
                       <div class="row">
                         <div class="col-lg-3 col-6">
