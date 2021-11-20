@@ -18,7 +18,7 @@
 
     <!-- title -->
     <x-slot name="title">
-        Transaksi
+        Transaksi 
     </x-slot>
 
     <!-- Content Wrapper. Contains page content -->
@@ -28,7 +28,7 @@
             <div class="container">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0"> Transaksi <small></small></h1>
+                        <h1 class="m-0"> Transaksi Bank Sampah Samita</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         {{-- <ol class="breadcrumb float-sm-right">
@@ -48,6 +48,9 @@
                 <div class="col-lg-12">
                     <div class="card card-primary card-outline">
                         <div class="card-body">
+                            <div class="card-tools">
+                                <a href="{{url('tambahtransaksi')}}" class="btn btn-success"> Transaksi Baru <i class="fas fa-plus-square"></i></a>
+                            </div>
                             <div class="table-responsive">
                                 <table id="example1" class="table table-bordered" width="100%">
                                     <thead>
@@ -56,7 +59,7 @@
                                             <th>Jenis Transaksi</th>
                                             <th>Jumlah Timbangan</th>
                                             <th>Total Transaksi</th>
-                                            <th>#</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                 </table>

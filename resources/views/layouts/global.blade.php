@@ -93,7 +93,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <li class="nav-item dropdown">
                         <a id="dropdownSubMenu1" href="{{ url('') }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Transaksi</a>
                         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
-                        <li><a href="{{url('tambahtransaksi')}}" class="dropdown-item">Input Transaksi Baru </a></li>
+                        <li><a href="{{url('tambahtransaksi')}}" class="dropdown-item">Transaksi Baru </a></li>
                         <li><a href="{{url('transaksi')}}" class="dropdown-item">Lihat Data Transaksi</a></li>
                         </ul>
                         </li>

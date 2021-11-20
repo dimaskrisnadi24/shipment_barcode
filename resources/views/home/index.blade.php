@@ -45,7 +45,7 @@
                             <div class="icon">
                               <i class="far fa-chart-bar"></i>
                             </div>
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="{{url('transaksi')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                           </div>
                         </div>
                         <!-- ./col -->
@@ -77,7 +77,7 @@
                             <div class="icon">
                               <i class="fas fa-exchange-alt"></i>
                             </div>
-                            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="{{url('tambahtransaksi')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                           </div>
                         </div>
                         <!-- ./col -->
